@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
-
 #import <OutlineViewTest/OutlineViewTest.h>
+void DoMono (void);
 
 @interface AppDelegate ()
 
@@ -12,6 +12,8 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification*)aNotification
 {
+    DoMono ();
+
     self.outlineViewTest = [[LMOutlineViewTest alloc] init];
 }
 

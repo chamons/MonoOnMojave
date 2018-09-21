@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426E10A62155713700AEB5DF /* mono.c in Sources */ = {isa = PBXBuildFile; fileRef = 426E10A3215570FA00AEB5DF /* mono.c */; };
 		E75852842153A49200ED972C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E75852832153A49200ED972C /* AppDelegate.m */; };
 		E758528C2153A49300ED972C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E758528B2153A49300ED972C /* main.m */; };
 		E75852972153AB1900ED972C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E75852962153AB1900ED972C /* MainMenu.xib */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		426E10A3215570FA00AEB5DF /* mono.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mono.c; sourceTree = "<group>"; };
 		E758527F2153A49200ED972C /* XcodeMacMojaveTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeMacMojaveTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75852822153A49200ED972C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E75852832153A49200ED972C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				E75852962153AB1900ED972C /* MainMenu.xib */,
 				E75852982153AB5A00ED972C /* Info.plist */,
 				E758528B2153A49300ED972C /* main.m */,
+				426E10A3215570FA00AEB5DF /* mono.c */,
 			);
 			path = XcodeMacMojaveTest2;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E758528C2153A49300ED972C /* main.m in Sources */,
+				426E10A62155713700AEB5DF /* mono.c in Sources */,
 				E75852842153A49200ED972C /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,17 +396,26 @@
 		E75852912153A49300ED972C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "/Library/Frameworks/Mono.framework/Versions/5.12.0/include/mono-2.0/";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/XamarinMacMojaveTest2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/Mono.framework/Versions/5.12.0/lib/pkgconfig/../../lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lmono-2.0",
+					"-liconv",
+					"-lpthread",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lemonmojo.XcodeMacMojaveTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -412,17 +425,26 @@
 		E75852922153A49300ED972C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = "/Library/Frameworks/Mono.framework/Versions/5.12.0/include/mono-2.0/";
 				INFOPLIST_FILE = "$(PROJECT_DIR)/XamarinMacMojaveTest2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /Library/Frameworks/Mono.framework/Versions/5.12.0/lib/pkgconfig/../../lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lmono-2.0",
+					"-liconv",
+					"-lpthread",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lemonmojo.XcodeMacMojaveTest2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

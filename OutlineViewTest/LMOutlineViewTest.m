@@ -1,6 +1,8 @@
 #import "LMOutlineViewTest.h"
 #import "LMNode.h"
 
+
+
 static NSString* const CELL_IDENTIFIER = @"LMCellIdentifier";
 
 @interface LMOutlineViewTest()
@@ -16,12 +18,13 @@ static NSString* const CELL_IDENTIFIER = @"LMCellIdentifier";
 {
     self = [super init];
     
+
     if (self) {
         self.rootNode = [LMNode makeExampleTree];
         
         NSWindowStyleMask windowStyle = NSWindowStyleMaskClosable | NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable | NSWindowStyleMaskTitled;
         self.window = [[NSWindow alloc] initWithContentRect:NSMakeRect(100, 100, 500, 300) styleMask:windowStyle backing:NSBackingStoreBuffered defer:NO];
-        self.window.contentView.superview.wantsLayer = YES;
+//        self.window.contentView.superview.wantsLayer = YES;
         
         NSView* outlineView = [self makeOutlineViewWithFrame:self.window.contentView.bounds];
         
